@@ -2,4 +2,14 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p hello welcome to my world konakanchi world #{title}
+ 
+  button(type="button", class="btn btn-danger",onclick="update()") Press Me
+  
+  script.  
+   var client_count=0;
+     function update() {
+       client_count++;
+       document.getElementById("target").innerHTML=`Value now ${client_count}`;
+     }
+  
